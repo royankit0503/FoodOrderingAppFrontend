@@ -66,11 +66,10 @@ class Home extends Component {
     }
 
     componentWillMount() {
-        
-        // Empty the existing cart
+        // clear existing cart
         sessionStorage.removeItem('customer-cart');
     
-        // Get restaurants
+        // get restaurants from api
         let that = this;
         let dataRestaurants = null;
         let xhrRestaurants = new XMLHttpRequest();
@@ -147,7 +146,7 @@ class Home extends Component {
         const { classes } = this.props;
         return (
             <div>
-                {/* Loading Header Component */}
+                {/* header with search box */}
                 <Header
                     showSearchBox={true}
                     searchHandler={this.searchHandler}
@@ -169,7 +168,7 @@ class Home extends Component {
                                 key={'restaurant' + restaurant.id}
                             >
 
-                                {/* Restaurant Details */}
+                                {/* restaurant details card */}
                                 <Card className={classes.restaurantCard} style={{ textDecoration: 'none' }}>
                                     <CardMedia
                                         className={classes.restaurantCardMedia}
@@ -178,25 +177,25 @@ class Home extends Component {
                                     />
                                     <CardContent>
 
-                                        {/* Restaurant Name */}
+                                        {/* restaurant name */}
                                         <Typography className={classes.restaurantName} gutterBottom variant='h5' component='h2'>
                                             {restaurant.restaurant_name}
                                         </Typography>
 
-                                        {/* Restaurant Categories */}
+                                        {/* restaurant categories */}
                                         <Typography variant='subtitle1'>
                                             {restaurant.categories}
                                         </Typography>
 
                                         <div className={classes.ratingAvgRateDiv}>
-                                            {/* Restaurant Rating */}
+                                            {/* restaurant rating */}
                                             <div className={classes.restaurantRatingDiv}>
                                                 <Typography className={classes.restaurantRatingText} variant='body2'>
                                                     <i className="fa fa-star"></i> {restaurant.customer_rating} ({restaurant.number_customers_rated})
                                                 </Typography>
                                             </div>
 
-                                            {/* Restaurant Average Rate */}
+                                            {/* restaurant average price */}
                                             <Typography className={classes.restaurantAvgRateText} variant='body2'>
                                                 <i className="fa fa-inr"></i>{restaurant.average_price} for two
                                             </Typography>
