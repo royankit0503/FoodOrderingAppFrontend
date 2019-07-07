@@ -1,0 +1,119 @@
+.class-header {
+    background-color: #333;
+    height: 100%;
+    padding: 8px 32px 8px 16px;
+    display: flex;
+    
+    /* position: relative; */
+}
+
+.login-button {
+    float: right;
+    height : 10px;
+    width: 10%;
+}
+.class-app-logo {
+    height: 36px;
+    width: 5%;
+    float: left;
+    margin-top: 5px;
+}
+.app-logo{
+    background: white;
+    height: 36px;
+}
+
+
+.searchbox {
+    align-content: center;
+    text-align: left;
+    border-radius: 4px;
+    width: 50%;
+    height: 36px;
+    background-color:#333;
+    margin-right: 25%;
+    margin-left: 20%;
+    margin-top: 5px;
+    
+    
+    /* transform: translateY(50%); */
+    /* display: inline; */
+}
+
+#searchbox-icon {
+    margin: 5px 8px 2px 5px;
+}
+
+#searchbox-input {
+    transform: translateY(-20%);
+    height: 10px;
+    width: 100%;
+    background-color: #333;
+    /* display: inline; */
+    margin-left: 5px;
+    text-align: left;
+    text-align: left;
+    color:white;
+}
+
+
+
+.class-logo {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dispNone {
+    display: none;
+}
+
+.dispBlock {
+    display: block;
+}
+
+.red {
+    color: red;
+}
+
+
+
+
+
+#profile-pic-icon {
+    float: right;
+    margin-right: 16px;
+}
+
+#profile-pic-avatar {
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#menu-list-grow {
+    margin-right: 50px;
+}
+
+#menu-list {
+    border-radius: 4px;
+    background-color: #dbdbdb;
+}
+
+
+@media (max-width: 832px) {
+    .class-header {
+        flex-direction: column;
+    }
+    .searchbox{
+      align-items: left;
+      margin: 2%;
+    }
+    .login-button{
+        align-items: left 
+    }
+    
+}
